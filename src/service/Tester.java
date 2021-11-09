@@ -16,7 +16,7 @@ public class Tester {
 //        System.out.println(getCustomer("michael@kroon.com"));
 
         // As a hotel employee I want to see a list of all our customers
-//        getAllCustomers();
+        getAllCustomers();
 
 
 

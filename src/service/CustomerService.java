@@ -2,8 +2,7 @@ package service;
 
 import model.Customer;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CustomerService {
 
@@ -18,11 +17,12 @@ public class CustomerService {
         return customers.get(customerEmail);
     }
 
-    public static void getAllCustomers(){
-        System.out.printf("%s customers in the system:\n", customers.size());
+    public static Collection<Customer> getAllCustomers(){
+        Collection<Customer> customerArrayList = new ArrayList<>();
         for (Customer customerInfo : customers.values()) {
-            System.out.printf("\n%s\n", customerInfo);
+            customerArrayList.add(customerInfo);
         };
+        return customerArrayList;
     }
 
 }
