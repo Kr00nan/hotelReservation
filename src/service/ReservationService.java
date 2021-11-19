@@ -1,8 +1,9 @@
 package service;
 
 import model.Customer;
-import model.Room;
+import model.IRoom;
 import model.Reservation;
+import model.Room;
 
 import java.util.Collection;
 import java.util.Date;
@@ -10,7 +11,7 @@ import java.util.LinkedList;
 
 public class ReservationService {
 
-    Collection<Room> rooms = new LinkedList<>();
+    Collection<IRoom> rooms = new LinkedList<>();
 
     public void addRoom(Room room){
 

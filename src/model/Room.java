@@ -4,7 +4,29 @@ public class Room implements IRoom {
 
     protected String roomNumber;
     protected Double price;
-    protected RoomType enumeration;
+    protected RoomType type;
+
+    public Room(String roomNumber, Double price, RoomType enumeration){
+        this.roomNumber = roomNumber;
+        this.price = price;
+        this.type = enumeration;
+    }
+
+    public Room() {
+        
+    }
+
+    public void setRoomNumber(String roomNumber){
+        this.roomNumber = roomNumber;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public void setRoomType(RoomType type){
+        this.type = type;
+    }
 
     public String getRoomNumber() {
         return roomNumber;
@@ -15,7 +37,7 @@ public class Room implements IRoom {
     }
 
     public RoomType getRoomType() {
-        return enumeration;
+        return type;
     }
 
     public boolean isFree() {
@@ -24,6 +46,10 @@ public class Room implements IRoom {
 
     @Override
     public String toString() {
-        return "FROM ROOM CLASS: Insert Better Description";
+        return String.format("Number: %s\nPrice: %s\nType: %s\nFree: %s\n",
+                roomNumber,
+                price,
+                type,
+                isFree());
     }
 }
