@@ -10,8 +10,8 @@ User Scenarios
 
 Admin Scenarios
 - displaying all customers accounts
-- viewing all of the rooms in the hotel
-- viewing all of the hotel reservations
+- viewing all the rooms in the hotel
+- viewing all the hotel reservations
 - adding a room to the hotel application
 
 Reserving a Room - requirements
@@ -25,7 +25,7 @@ Reserving a Room - requirements
 Room Requirements
 - room cost: Rooms will contain a price per night. When displaying rooms, paid rooms will display the price per night and
     free rooms will display "Free" or have a $0 price.
-- unique room numbers: Each room will have a unique room number, meaning that no two rooms can have the same room number
+- unique room numbers: Each room will have a unique room number, meaning no two rooms can have the same room number
 - room type: rooms can be either single occupant or double occupant
 
 Customer Requirements
@@ -34,5 +34,5 @@ Customer Requirements
 
 Error Requirements
 - No Crashing :: the application does not crash based on user input
-- No unhandled exceptions :: the app has 'try and catch' blocks that are used to capture exceptions and provide useful
+- No unhandled exceptions :: the app has 'try catch' blocks that are used to capture exceptions and provide useful
     information to the user. there are not unhandled exceptions.

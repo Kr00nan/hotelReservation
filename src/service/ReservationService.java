@@ -17,10 +17,10 @@ public class ReservationService {
 
     }
 
-    public static Room getARoom(String roomNumber){
-        Room room = new Room();
-        return room;
-    }
+//    public static Room getARoom(String roomNumber){
+//        Room room = new Room();
+//        return room;
+//    }
 
     public static Reservation reserveARoom(Customer customer, Room room, Date checkInDate, Date checkOutDate){
         Reservation reservation = new Reservation();

@@ -20,9 +20,9 @@ public class HotelResource {
         addCustomer(firstName, lastName, email);
     }
 
-    public static Room getRoom(String roomNumber){
-        return getARoom(roomNumber);
-    }
+//    public static Room getRoom(String roomNumber){
+//        return getARoom(roomNumber);
+//    }
 
     public static Collection<Room> findARoom(Date checkIn, Date checkOut) {
         Collection<Room> rooms = new ArrayList<>();

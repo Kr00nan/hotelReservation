@@ -12,10 +12,6 @@ public class Room implements IRoom {
         this.type = enumeration;
     }
 
-    public Room() {
-        
-    }
-
     public void setRoomNumber(String roomNumber){
         this.roomNumber = roomNumber;
     }
