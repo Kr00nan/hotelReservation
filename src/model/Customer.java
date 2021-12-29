@@ -24,31 +24,19 @@ public class Customer {
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
     public String getEmail() {
-        return email;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+        return this.email;
     }
 
     @Override
     public String toString() {
-        return String.format("Name: %s %s\nEmail: %s", firstName, lastName, email);
+        return String.format("First Name: %s Last Name: %s Email: %s", this.firstName, this.lastName, this.email);
     }
 }

@@ -29,11 +29,11 @@ public class HotelResource {
         return rooms;
     }
 
-    public static Reservation bookARoom(String customerEmail, Room room, Date checkInDate, Date checkOutDate){
-        Customer customer = getCustomer(customerEmail);
-        Reservation reservation = reserveARoom(customer, room, checkInDate, checkOutDate);
-        return reservation;
-    }
+//    public static Reservation bookARoom(String customerEmail, Room room, Date checkInDate, Date checkOutDate){
+//        Customer customer = getCustomer(customerEmail);
+//        Reservation reservation = reserveARoom(customer, room, checkInDate, checkOutDate);
+//        return reservation;
+//    }
 
     public static Collection<Reservation> retrieveCustomersReservations(String customerEmail){
         Customer customer = retrieveCustomer(customerEmail);

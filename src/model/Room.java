@@ -12,40 +12,28 @@ public class Room implements IRoom {
         this.type = enumeration;
     }
 
-    public void setRoomNumber(String roomNumber){
-        this.roomNumber = roomNumber;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public void setRoomType(RoomType type){
-        this.type = type;
-    }
-
     public String getRoomNumber() {
-        return roomNumber;
+        return this.roomNumber;
     }
 
     public Double getRoomPrice() {
-        return price;
+        return this.price;
     }
 
     public RoomType getRoomType() {
-        return type;
+        return this.type;
     }
 
     public boolean isFree() {
-        return false;
+        return Double.compare(this.price, 0.0) <= 0;
     }
 
     @Override
     public String toString() {
-        return String.format("Number: %s\nPrice: %s\nType: %s\nFree: %s\n",
-                roomNumber,
-                price,
-                type,
-                isFree());
+        return String.format("Room Number: %s %s bed Room Price: $%.2f",
+                this.roomNumber,
+                this.type,
+                this.price
+        );
     }
 }

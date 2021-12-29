@@ -8,8 +8,15 @@ public class Reservation {
     private Date checkInDate;
     private Date checkOutDate;
 
+    public Reservation(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+        this.customer = customer;
+        this.room = room;
+        this.checkInDate = checkInDate;
+        this.checkOutDate = checkOutDate;
+    }
+
     @Override
     public String toString() {
-        return String.format("%s, you've reserved room %s. Checking in on %s and checking out on %s.", customer.getFirstName(), room.getRoomNumber(), checkInDate, checkOutDate);
+        return String.format("%s, you've reserved room %s.\nChecking in on %s and checking out on %s.\nPrice per night: %s", customer.getFirstName(), room.getRoomNumber(), checkInDate, checkOutDate, room.getRoomPrice());
     }
 }

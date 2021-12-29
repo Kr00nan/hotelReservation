@@ -1,9 +1,6 @@
 package service;
 
-import model.Customer;
-import model.IRoom;
-import model.Reservation;
-import model.Room;
+import model.*;
 
 import java.util.Collection;
 import java.util.Date;
@@ -17,18 +14,17 @@ public class ReservationService {
 
     }
 
-//    public static Room getARoom(String roomNumber){
-//        Room room = new Room();
-//        return room;
-//    }
-
-    public static Reservation reserveARoom(Customer customer, Room room, Date checkInDate, Date checkOutDate){
-        Reservation reservation = new Reservation();
-        return reservation;
+    public static Room getARoom(String roomNumber){
+        return new Room("100",0.0, RoomType.SINGLE);
     }
 
-    public static Collection<Room> findRooms(Date checkInDate, Date checkOutDate){
-        Collection<Room> rooms = new LinkedList<>();
+//    public static Reservation reserveARoom(Customer customer, Room room, Date checkInDate, Date checkOutDate){
+//        Reservation reservation = new Reservation();
+//        return reservation;
+//    }
+
+    public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate){
+        Collection<IRoom> rooms = new LinkedList<>();
         return rooms;
     }
 
