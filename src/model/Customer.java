@@ -8,19 +8,9 @@ public class Customer {
     private String email;
 
     public Customer(String firstName, String lastName, String email) {
-
-        String emailRegex = "^(.+)@(.+).(.+)$";
-        Pattern pattern = Pattern.compile(emailRegex);
-
-        // check to make sure email format is legit
-        if (pattern.matcher(email).matches()) {
-            this.email = email;
-        } else {
-            throw new IllegalArgumentException("Email format incorrect; required format: xxx@xxx.xxx");
-        }
-
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
     }
 
     public String getFirstName() {
