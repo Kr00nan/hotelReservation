@@ -2,8 +2,8 @@ package model;
 
 public class FreeRoom extends Room {
 
-    public FreeRoom(String r, RoomType e) {
-        super(r, 0.0, e);
+    public FreeRoom(String room, RoomType enumeration) {
+        super(room, 0.0, enumeration);
     }
 
     @Override

@@ -31,13 +31,13 @@ public class HotelResource {
         }
     }
 
-    public static IRoom getRoom(String roomNumber){
-        //TODO
-    }
-
-    public static Collection<Room> findARoom(Date checkIn, Date checkOut) {
-        //TODO
-    }
+//    public static IRoom getRoom(String roomNumber){
+//        //TODO
+//    }
+//
+//    public static Collection<Room> findARoom(Date checkIn, Date checkOut) {
+//        //TODO
+//    }
 
     public static Reservation bookARoom(String customerEmail, Room room, Date checkInDate, Date checkOutDate){
         Customer customer = getCustomer(customerEmail);

@@ -1,12 +1,15 @@
 package ui;
 
+import java.util.Scanner;
+
 public class MainMenu {
 
     String input;
+    Scanner scanner;
 
     public static void main(String[] args) {
         // read input from user
-//        System.in.read();
+        // System.in.read();
         // while input isn't 5, run the menu
         new MainMenu().menu();
     }
@@ -20,19 +23,14 @@ public class MainMenu {
         System.out.println("4. Admin");
         System.out.println("5. Exit");
         System.out.println("---------------------------");
-        System.out.println("Please select a number for the menu option");
-    }
+        try {
+            System.out.println("Please select a number for the menu option");
+            scanner = new Scanner(System.in);
+            input = scanner.nextLine();
+        } catch (Exception ex) { ex.getLocalizedMessage(); }
+        finally {
+            scanner.close();
+        }
 
-    public void admin() {
-        System.out.println("\nAdmin Menu");
-        System.out.println("---------------------------");
-        System.out.println("1. See all Customers");
-        System.out.println("2. See all Rooms");
-        System.out.println("3. See all Reservations");
-        System.out.println("4. Add a Room");
-        System.out.println("5. Add Test Data");
-        System.out.println("5. Back to Main Menu");
-        System.out.println("---------------------------");
-        System.out.println("Please select a number for the menu option");
     }
 }
