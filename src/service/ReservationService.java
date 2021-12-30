@@ -8,32 +8,29 @@ import java.util.LinkedList;
 
 public class ReservationService {
 
-    Collection<IRoom> rooms = new LinkedList<>();
+    private static Collection<IRoom> reservations = new LinkedList<>();
 
     public void addRoom(Room room){
-
+        //TODO
     }
 
-    public static Room getARoom(String roomNumber){
-        return new Room("100",0.0, RoomType.SINGLE);
+    public static IRoom getARoom(String roomID){
+        //TODO
     }
 
-//    public static Reservation reserveARoom(Customer customer, Room room, Date checkInDate, Date checkOutDate){
-//        Reservation reservation = new Reservation();
-//        return reservation;
-//    }
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate){
+        //TODO
+    }
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate){
-        Collection<IRoom> rooms = new LinkedList<>();
-        return rooms;
+        //TODO
     }
 
     public static Collection<Reservation> getCustomerReservations(Customer customer){
-        Collection<Reservation> reservations = new LinkedList<>();
-        return reservations;
+        //TODO
     }
 
     public static void printAllReservations(){
-        System.out.println("Call from ReservationService printAllReservation");
+        System.out.println(reservations);
     }
 }
