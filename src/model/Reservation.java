@@ -15,6 +15,10 @@ public class Reservation {
         this.checkOutDate = checkOutDate;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
     @Override
     public String toString() {
         return String.format("%s, you've reserved room #%s.\nChecking in on %s and checking out on %s.\nPrice per night: $%.2f", customer.getFirstName(), room.getRoomNumber(), checkInDate, checkOutDate, room.getRoomPrice());
