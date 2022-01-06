@@ -1,17 +1,14 @@
 package service;
 
 import model.*;
-
-import java.util.Collection;
-import java.util.Date;
-import java.util.LinkedList;
+import java.util.*;
 
 public class ReservationService {
 
     private static Collection<IRoom> rooms = new LinkedList<>();
     private static Collection<Reservation> reservations = new LinkedList<>();
 
-    public void addRoom(Room room){
+    public static void addRoom(Room room){
         rooms.add(room);
     }
 
@@ -21,11 +18,11 @@ public class ReservationService {
             for(IRoom theOne : rooms) {
                 if (theOne.getRoomNumber().equals(roomID)) {
                     room = theOne;
+                    break;
                 }
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-            System.out.println("That room does not exist.");
         }
 
         return room;
@@ -40,10 +37,11 @@ public class ReservationService {
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate){
         Collection<IRoom> availableRooms = new LinkedList<>();
         try {
+
             // what rooms are available during the provided date range
+            System.out.println("There are no rooms available with those dates");
         } catch (Exception ex) {
             ex.printStackTrace();
-            System.out.println("There are no rooms available with those dates");
         }
         return availableRooms;
     }
