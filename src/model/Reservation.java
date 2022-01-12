@@ -16,7 +16,19 @@ public class Reservation {
     }
 
     public Customer getCustomer() {
-        return customer;
+        return this.customer;
+    }
+
+    public Date getCheckInDate() {
+        return this.checkInDate;
+    }
+
+    public Date getCheckOutDate() {
+        return this.checkOutDate;
+    }
+
+    public IRoom getRoom() {
+        return this.room;
     }
 
     @Override
