@@ -36,12 +36,20 @@ public class ReservationService {
 
     public static Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate){
         Collection<IRoom> availableRooms = new LinkedList<>();
-        try {
+        // am I comparing Dates or Calendar objects?
+        for (Reservation reservation : reservations) {
+            // if checkInDate and checkOutDate are before reservation.checkInDate, add room to list
+            if (checkOutDate.before(reservation.getCheckInDate()) && checkInDate.before(reservation.getCheckInDate())) {
+                availableRooms.add(reservation.getRoom());
+            }
+            // if checkInDate and checkOutDate are after reservation.checkOutDate, add room to list
+            if (checkInDate.after(reservation.getCheckOutDate()) )
+        }
 
-            // what rooms are available during the provided date range
-            System.out.println("There are no rooms available with those dates");
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        if (availableRooms.isEmpty()) {
+            // turn checkInDate and checkOutDate into calendar instances
+            // add 7 days to both checkInDate and checkOutDate
+            // run for loop again (turn this into a private method?)
         }
         return availableRooms;
     }
